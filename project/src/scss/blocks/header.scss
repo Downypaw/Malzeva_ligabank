@@ -1,0 +1,63 @@
+.header {
+  background-color: $block-color;
+  @include menu-text;
+  min-height: 91px;
+}
+
+.header__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.header__left {
+  display: inline-block;
+  padding: 26.5px 0px;
+}
+
+.header__navigation {
+  margin-left: 0px;
+}
+
+.header__navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  @include list;
+}
+
+.header__navigation-link {
+  text-decoration: none;
+  color: $basic-font-color;
+  display: inline-block;
+  padding: 37px 13px;
+
+  &:hover {
+    color: $highlight-color;
+  }
+}
+
+.header__login {
+  margin-left: 120px;
+}
+
+.header__login-link {
+  text-decoration: none;
+  display: inline-block;
+  padding: 35px 0px;
+  color: $basic-font-color;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("../../img/login-icon.svg") no-repeat;
+    width: 20px;
+    height: 22px;
+    left: -30px;
+    background-size: cover;
+  }
+
+  &:hover {
+    color: $highlight-color;
+  }
+}
