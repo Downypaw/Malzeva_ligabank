@@ -1,50 +1,46 @@
-.header {
+.page-header {
   background-color: $block-color;
   @include menu-text;
   min-height: 91px;
 }
 
-.header__container {
+.page-header__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.header__left {
+.page-header__left {
   display: inline-block;
   padding: 26.5px 0px;
 }
 
-.header__navigation {
+.page-header__navigation {
   margin-left: 0px;
 }
 
-.header__navigation-list {
+.page-header__navigation-list {
   display: flex;
   flex-wrap: wrap;
   @include list;
 }
 
-.header__navigation-link {
+.page-header__navigation-link {
+  @include link;
   text-decoration: none;
   color: $basic-font-color;
   display: inline-block;
   padding: 37px 13px;
-
-  &:hover {
-    color: $highlight-color;
-  }
 }
 
-.header__login {
+.page-header__login {
   margin-left: 120px;
 }
 
-.header__login-link {
-  text-decoration: none;
+.page-header__login-link {
+  @include link
   display: inline-block;
   padding: 35px 0px;
-  color: $basic-font-color;
   position: relative;
 
   &::before {
@@ -57,7 +53,11 @@
     background-size: cover;
   }
 
-  &:hover {
-    color: $highlight-color;
+  &:hover::before {
+    opacity: 0.5;
+  }
+
+  &:active::before {
+    opacity: 0.3;
   }
 }

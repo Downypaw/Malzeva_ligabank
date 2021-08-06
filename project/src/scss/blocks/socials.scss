@@ -1,0 +1,65 @@
+.socials__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.socials__link--facebook,
+.socials__link--instagram,
+.socials__link--twitter,
+.socials__link--youtube {
+  position: relative;
+  min-width: 9px;
+  min-height: 13px;
+  display: inline-block;
+  vertical-align: baseline;
+
+  &:hover::before {
+    opacity: 0.5;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+}
+
+
+.socials__link--facebook::before {
+  content: "";
+  position: absolute;
+  background: url("../../img/facebook-icon.svg") no-repeat;
+  width: 9px;
+  height: 16px;
+  top: 8px;
+  background-size: cover;
+}
+
+.socials__link--instagram::before {
+  content: "";
+  position: absolute;
+  background: url("../../img/instagram-icon.svg") no-repeat;
+  width: 16px;
+  height: 16px;
+  top: 8px;
+  left: -4px;
+  background-size: cover;
+}
+
+.socials__link--twitter::before {
+  content: "";
+  position: absolute;
+  background: url("../../img/twitter-icon.svg") no-repeat;
+  width: 16px;
+  height: 13px;
+  top: 11px;
+  left: -2px;
+  background-size: cover;
+}
+
+.socials__link--youtube::before {
+  content: "";
+  position: absolute;
+  background: url("../../img/youtube-icon.svg") no-repeat;
+  width: 16px;
+  height: 13px;
+  top: 10px;
+  background-size: cover;
+}

@@ -16,3 +16,28 @@
   margin: 0;
   list-style: none;
 }
+
+@mixin thin-text {
+  font-size: 12px;
+  line-height: 16.8px;
+}
+
+@mixin link {
+  text-decoration: none;
+  color: $basic-font-color;
+  &:hover {
+    color: $highlight-color;
+  }
+
+  &:active,
+  &:focus {
+    color: $dark-highlight-color;
+  }
+}
+
+:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
+}
