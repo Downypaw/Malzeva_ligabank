@@ -1,0 +1,102 @@
+.page-footer {
+  background-color: $block-color;
+  min-height: 224px;
+}
+
+.page-footer__container {
+  display: flex;
+}
+
+.page-footer__information,
+.page-footer__description,
+.page-footer__postscript {
+  @include thin-text;
+}
+
+.page-footer__left {
+  margin-right: 77px;
+}
+
+.page-footer__information {
+  width: 255px;
+  margin-top: 11px;
+}
+
+.page-footer__menu {
+  margin-top: 6px;
+  margin-right: 110px;
+}
+
+.page-footer__menu-item {
+  margin-bottom: 8px;
+}
+
+.page-footer__menu-link {
+  @include link;
+}
+
+.page-footer__details {
+  margin-top: 10px;
+  margin-right: 113px;
+}
+
+.page-footer__code {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("../../img/mobile-icon.svg") no-repeat;
+    width: 10px;
+    height: 16px;
+    top: 1px;
+    left: -29px;
+    background-size: cover;
+  }
+}
+
+.page-footer__description {
+  width: 167px;
+  margin-top: 0;
+}
+
+.page-footer__phone {
+  margin-top: 8px;
+  margin-right: 80px;
+}
+
+.page-footer__phone-number {
+  @include link;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("../../img/phone-icon.svg") no-repeat;
+    width: 16px;
+    height: 16px;
+    top: 3px;
+    left: -32px;
+    background-size: cover;
+  }
+}
+
+.page-footer__postscript {
+  margin-top: 2px;
+  width: 122px;
+}
+
+.page-footer__menu-list,
+.page-footer__code,
+.page-footer__phone-number {
+  font-weight: 500;
+}
+
+.page-footer__menu-list,
+.page-footer__socials {
+  @include list;
+}
+
+.page-footer__socials {
+  display: flex;
+}
