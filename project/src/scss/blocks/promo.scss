@@ -1,0 +1,35 @@
+.promo {
+  background: url("../../img/black-card.png") no-repeat 647px 118px,
+  url("../../img/white-card.png") no-repeat 756px 60px,
+  linear-gradient(180.24deg, rgba(32, 39, 179, 0) 36.31%, #2027B3 99.79%) no-repeat -1165px,
+  linear-gradient(180.24deg, rgba(32, 39, 179, 0) 36.31%, #2027B3 99.79%) no-repeat 1015px,
+  linear-gradient(183.47deg, rgba(56, 65, 255, 0) 66.3%, #3841FF 97.14%) no-repeat 745px,
+  linear-gradient(183.47deg, rgba(56, 65, 255, 0) 66.3%, #3841FF 97.14%) no-repeat -1015px,
+  $highlight-color;
+  padding-top: 82px;
+  padding-left: 218px;
+  min-height: 317px;
+}
+
+.promo__headling {
+  color: $basic-color;
+  font-weight: bold;
+  font-size: 54px;
+  margin-bottom: 0;
+}
+
+.promo__description {
+  color: $basic-color;
+  font-size: 22px;
+  margin-top: 32px;
+  margin-bottom: 50px;
+}
+
+.promo__link {
+  @include link;
+
+  font-size: 18px;
+  background-color: $basic-color;
+  padding: 15px 36px;
+  border-radius: 5px;
+}
