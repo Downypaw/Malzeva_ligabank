@@ -1,0 +1,63 @@
+.history {
+  background-color: $block-color;
+  padding: 25px 70px;
+}
+
+.history__title {
+  font-weight: 500;
+  font-size: 28px;
+}
+
+.history__records {
+  column-count: 2;
+  column-gap: 249px;
+  max-height: 267px;
+  @include list;
+  padding-top: 29px;
+  padding-bottom: 27px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 289px;
+    left: 683.96px;
+    top: 1101px;
+    background-color: $decoration-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.history__record {
+  font-size: 18px;
+  margin-bottom: 22px;
+}
+
+.history__date {
+  margin-right: 40px;
+}
+
+.history__initial-value {
+  margin-right: 65px;
+}
+
+.history__result-value {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 41px;
+    height: 17px;
+    left: -53px;
+    top: 4px;
+    background: url("../../img/arrow-right-icon.svg") no-repeat;
+  }
+}
+
+.history__clearing {
+  @include button;
+  font-size: 16px;
+  min-width: 198px;
+  min-height: 51px;
+}

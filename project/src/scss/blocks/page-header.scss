@@ -1,10 +1,11 @@
 .page-header {
-  background-color: $block-color;
+  background: $block-color;
   @include menu-text;
   min-height: 91px;
 }
 
 .page-header__container {
+  background: $block-color;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -14,25 +15,6 @@
   display: inline-block;
   padding: 26.5px 0px;
   padding-bottom: 0;
-}
-
-.page-header__navigation {
-  margin-left: 0px;
-}
-
-.page-header__navigation-list {
-  display: flex;
-  flex-wrap: wrap;
-  @include list;
-}
-
-.page-header__navigation-link {
-  @include link;
-  text-decoration: none;
-  color: $basic-font-color;
-  display: inline-block;
-  padding: 37px 13px;
-  padding-bottom: 35px;
 }
 
 .page-header__login {

@@ -1,14 +1,25 @@
 .promo {
-  background: url("../../img/black-card.png") no-repeat 647px 118px,
-  url("../../img/white-card.png") no-repeat 756px 60px,
-  linear-gradient(180.24deg, rgba(32, 39, 179, 0) 36.31%, #2027B3 99.79%) no-repeat -1165px,
-  linear-gradient(180.24deg, rgba(32, 39, 179, 0) 36.31%, #2027B3 99.79%) no-repeat 1015px,
-  linear-gradient(183.47deg, rgba(56, 65, 255, 0) 66.3%, #3841FF 97.14%) no-repeat 745px,
-  linear-gradient(183.47deg, rgba(56, 65, 255, 0) 66.3%, #3841FF 97.14%) no-repeat -1015px,
-  $highlight-color;
-  padding-top: 82px;
-  padding-left: 218px;
   min-height: 317px;
+  background: linear-gradient(180.24deg, rgba(32, 39, 179, 0) 36.31%, #2027B3 99.79%),
+    linear-gradient(180.24deg, rgba(32, 39, 179, 0) 36.31%, #2027B3 99.79%),
+    $highlight-color;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.promo__container {
+  padding-top: 82px;
+  padding-left: 170px;
+  box-sizing: border-box;
+  padding-bottom: 128px;
+  background:
+    url("../../img/black-card.png") no-repeat 600px 118px,
+    url("../../img/white-card.png") no-repeat 710px 60px,
+    linear-gradient(183.47deg, rgba(56, 65, 255, 0) 66.3%, #3841FF 97.14%) no-repeat 700px,
+    linear-gradient(183.47deg, rgba(56, 65, 255, 0) 66.3%, #3841FF 97.14%) no-repeat 52px,
+    linear-gradient(180.24deg, rgba(32, 39, 179, 0) 36.31%, #2027B3 99.79%),
+    linear-gradient(180.24deg, rgba(32, 39, 179, 0) 36.31%, #2027B3 99.79%),
+    $highlight-color;
+    background-size: auto, auto, 270px, 150px, auto, auto;
 }
 
 .promo__headling {
@@ -27,7 +38,6 @@
 
 .promo__link {
   @include link;
-
   font-size: 18px;
   background-color: $basic-color;
   padding: 15px 36px;
