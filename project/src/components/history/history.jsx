@@ -1,9 +1,16 @@
 import React from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {getRecords} from '../../store/selectors';
+import {clearHistory} from '../../store/action';
 
 export default function History() {
   const records = useSelector(getRecords);
+  const dispatch = useDispatch();
+
+  const onClearingButtonClick = () => {
+    dispatch(clearHistory());
+  };
+
   return (
     <div className="history">
       <h3 className="history__title">История конвертация</h3>
@@ -16,7 +23,7 @@ export default function History() {
           </li>
         ))}
       </ul>
-      <button className="history__clearing">Очистить историю</button>
+      <button className="history__clearing" onClick={onClearingButtonClick}>Очистить историю</button>
     </div>
   );
 }

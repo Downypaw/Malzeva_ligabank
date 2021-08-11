@@ -1,4 +1,5 @@
 .history {
+  box-sizing: border-box;
   background-color: $block-color;
   padding: 25px 70px;
 }
@@ -9,10 +10,12 @@
 }
 
 .history__records {
-  column-count: 2;
-  column-gap: 249px;
-  max-height: 267px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 227px;
   @include list;
+  column-gap: 249px;
   padding-top: 29px;
   padding-bottom: 27px;
 

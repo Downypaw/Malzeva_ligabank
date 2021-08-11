@@ -5,16 +5,23 @@ import {configureStore} from '@reduxjs/toolkit';
 import {reducer} from './store/reducer';
 import App from './components/app/app';
 import './scss/style.scss';
+import {createAPI} from './api';
+import {fetchRates} from './store/api-action';
+import {formatDate} from './util';
+
+const api = createAPI();
 
 const store = configureStore({
   reducer: reducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       thunk: {
-        extraArgument: 'https://www.cbr-xml-daily.ru/daily_json.js?date_req=',
+        extraArgument: api,
       },
     })
 });
+
+store.dispatch(fetchRates(formatDate(new Date())));
 
 ReactDOM.render(
   <React.StrictMode>
